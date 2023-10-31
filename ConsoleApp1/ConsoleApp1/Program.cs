@@ -8,7 +8,7 @@
             {
                 Student student = new();
                 Console.WriteLine("Input Age: ");
-                student.Age = Convert.ToInt32(Console.ReadLine());
+                Student.Age = Convert.ToInt32(Console.ReadLine());
 
                 Console.WriteLine("Input name: ");
                 Student.Name = Console.ReadLine();
@@ -17,9 +17,9 @@
                 Student.SurName = Console.ReadLine();
 
                 Console.WriteLine("Input group name: ");
-                student.GroupNo = Console.ReadLine();
+                Student.GroupNo = Console.ReadLine();
 
-                Console.WriteLine(student.Id + "." + Student.FullName() + " " + student.Age + " " + student.GroupNo);
+                Console.WriteLine(student.Id + "." + Student.FullName() + " " + Student.Age + " " + Student.GroupNo);
 
                 Console.WriteLine("Check Fullname: ");
                 Console.WriteLine(Student.CheckFullname(Console.ReadLine()));

@@ -19,14 +19,38 @@ namespace ConsoleApp1
 
         public static string Name { 
             get => _name;
-            set => _name = value;
+            set
+            {
+                for (int i = 0; i < value.Length; i++)
+                {
+                    while ((value[i] > 122 || value[i] < 65) || !(value[i] < 90 || value[i] > 97))
+                    {
+                        Console.WriteLine("Ancaq herf olmalidir!!!");
+                        Console.WriteLine("Input name: ");
+                        value = Console.ReadLine();
+                    }
+                }
+                _name = value;
+            }
         }
         public static string SurName
         {
             get => _surName;
-            set => _surName = value;
+            set
+            {
+                for (int i = 0; i < value.Length; i++)
+                {
+                    while ((value[i] > 122 || value[i] < 65) || !(value[i] < 90 || value[i] > 97))
+                    {
+                        Console.WriteLine("Ancaq herf olmalidir!!!");
+                        Console.WriteLine("Input surname: ");
+                        value = Console.ReadLine();
+                    }
+                }
+                _surName = value;
+            }
         }
-        public string GroupNo { 
+        public static string GroupNo { 
             get => _groupno;
             set {
 
@@ -51,7 +75,7 @@ namespace ConsoleApp1
 
             }
         }
-        public int Age
+        public static int Age
         {
             get => _age;
             set
